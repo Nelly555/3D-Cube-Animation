@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #001E04;
+}
+.mainBox{
+    perspective: 900px;
+}
+h2{
+    color:#fff;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 5em auto;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.cube{
+    font-size: 4em;
+    width: 2em;
+    color:#fff;
+    margin: 3em auto;
+    transform-style: preserve-3d;
+    transform: rotatex(-45deg)rotateY(30deg);
+    animation: cubes 3.5s linear infinite;
+}
+@keyframes cubes{
+    0%{
+        transform: rotateY(360deg)scale(1.0)rotatex(40deg);
+    }
+}
+.side{
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    line-height: 2em;
+    background-size: cover;
+    border: 5px solid #123e16;
+    text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2,
+    0 0 30px #00fff2, 0 040px #00fff0,
+     50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 90px,
+     #00fff2;
+}
+.front{
+    transform: translateZ(1em);
+}
+.top{
+    transform: rotatex(90deg)translatez(1em);
+}
+.right{
+    transform: rotateY(90deg)translatez(1em);
+}
+.left{
+    transform: rotateY(-90deg)translateZ(1em);
+}
+.bottom{
+    transform: rotateX(-90deg)translateZ(1em);
+}
+.back{
+    transform: rotateY(-180deg)translatez(1em);
+}
